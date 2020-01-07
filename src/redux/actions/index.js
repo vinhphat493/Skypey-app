@@ -1,0 +1,47 @@
+import {
+  SET_ACTIVE_USER_ID,
+  SET_TYPING_VALUE,
+  SEND_MESSAGE,
+  EDIT_MESSAGE,
+  DELETE_MESSAGE,
+  SEND_EDIT_MESSAGE
+} from "../constants/action_types";
+
+export const setActiveUserId = id => ({
+  type: SET_ACTIVE_USER_ID,
+  payload: id
+});
+export const setTypingValue = value => ({
+  type: SET_TYPING_VALUE,
+  payload: value
+});
+export const sendMessage = (message, userId) => ({
+  type: SEND_MESSAGE,
+  payload: {
+    message,
+    userId
+  }
+});
+export const editMessage = (message, numberMes) => ({
+  type: EDIT_MESSAGE,
+  payload: {
+    message,
+    numberMes
+  }
+});
+export const sendEditMessage = (message, userId, numberMes) => ({
+  type: SEND_EDIT_MESSAGE,
+  payload: {
+    message,
+    userId,
+    numberMes
+  }
+});
+export const deleteMessage = (message, userId, numberMes) => ({
+  type: DELETE_MESSAGE,
+  payload: {
+    message,
+    userId,
+    numberMes
+  }
+});

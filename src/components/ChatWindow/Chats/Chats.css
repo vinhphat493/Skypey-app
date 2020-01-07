@@ -1,0 +1,13 @@
+.Chats {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
+  overflow-y: auto;
+  border-bottom: 1px solid rgba(189, 189, 192, 0.2);
+}
+
+.Chats::-webkit-scrollbar {
+    display: none;
+}

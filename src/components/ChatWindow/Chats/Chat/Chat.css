@@ -1,0 +1,69 @@
+.Chat {
+    color: #fff;
+    max-width: 90%;
+    padding: 1rem 2rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 1rem 0;
+    background: linear-gradient(90deg, #1986d8, #7b9cc2);
+}
+
+.Chat.is_user_msg {
+    margin-left: auto;
+    background: #2b2c33;
+    cursor: pointer;
+    position: relative;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.Chat__icon__close {
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, .7);
+    text-align: center;
+    line-height: 15px;
+    background-color: #000;
+}
+
+.Chat.is_user_msg:hover > .Chat__icon__close {
+    display: inline;
+}
+
+.Chat__inner_text {
+    font-size: 12px;
+    color: #fff;
+    display: none;
+}
+
+.Chat.is_user_edit .Chat__inner_text {
+    display: inline
+}
+
+.Chat.is_user_delete.is_user_msg:hover > .Chat__icon__close{
+    display: none;
+}
+
+.Chat.is_user_delete.is_user_msg:disabled,
+.Chat.is_user_delete.is_user_msg[disabled] {
+    cursor: not-allowed;
+    opacity: .9;
+    color: rgba(255, 255, 255, .5);
+}
+
+.Chat.is_user_delete.is_user_msg .Chat__inner_text {
+    display: none;
+}
+
+@media (min-width:576px) {
+    .Chat {
+        max-width: 60%;
+    }
+}
