@@ -1,11 +1,12 @@
 import React from "react";
+
 import "./User.css";
 
-import { store } from '../../redux/store';
-import { setActiveUserId } from '../../redux/actions';
+import { store } from "../../redux/store";
+import { setActiveUserId } from "../../redux/actions";
 
 const User = ({ user, hasClicked }) => {
-  const { name, profile_pic, status } = user;
+  const { name, status, profile_pic } = user;
   return (
     <div
       className={`User ${hasClicked ? "User__active" : ""}`}
